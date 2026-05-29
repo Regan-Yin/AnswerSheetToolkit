@@ -1,0 +1,674 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BA0000000000000000000001 /* AnswerSheetToolkitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0000000000000000000001 /* AnswerSheetToolkitApp.swift */; };
+		BA0000000000000000000002 /* ThemeMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0000000000000000000002 /* ThemeMode.swift */; };
+		BA0000000000000000000003 /* LanguageMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0000000000000000000003 /* LanguageMode.swift */; };
+		BA0000000000000000000004 /* AnswerEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0000000000000000000004 /* AnswerEntry.swift */; };
+		BA0000000000000000000005 /* AnswerSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0000000000000000000005 /* AnswerSheet.swift */; };
+		BA0000000000000000000006 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0000000000000000000006 /* AppSettings.swift */; };
+		BA0000000000000000000007 /* AnswerValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0000000000000000000007 /* AnswerValidator.swift */; };
+		BA0000000000000000000008 /* GridNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0000000000000000000008 /* GridNavigator.swift */; };
+		BA0000000000000000000009 /* ExportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0000000000000000000009 /* ExportService.swift */; };
+		BA0000000000000000000010 /* ZipArchive.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0000000000000000000010 /* ZipArchive.swift */; };
+		BA0000000000000000000011 /* XLSXWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0000000000000000000011 /* XLSXWriter.swift */; };
+		BA0000000000000000000012 /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0000000000000000000012 /* PersistenceService.swift */; };
+		BA0000000000000000000013 /* ClipboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0000000000000000000013 /* ClipboardService.swift */; };
+		BA0000000000000000000014 /* LocalizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0000000000000000000014 /* LocalizationService.swift */; };
+		BA0000000000000000000015 /* ThemeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0000000000000000000015 /* ThemeService.swift */; };
+		BA0000000000000000000016 /* MockExamTimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0000000000000000000016 /* MockExamTimerViewModel.swift */; };
+		BA0000000000000000000017 /* AnswerSheetEditorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0000000000000000000017 /* AnswerSheetEditorViewModel.swift */; };
+		BA0000000000000000000018 /* AppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0000000000000000000018 /* AppStore.swift */; };
+		BA0000000000000000000019 /* ExportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0000000000000000000019 /* ExportViewModel.swift */; };
+		BA0000000000000000000020 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0000000000000000000020 /* SettingsViewModel.swift */; };
+		BA0000000000000000000021 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0000000000000000000021 /* MainView.swift */; };
+		BA0000000000000000000022 /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0000000000000000000022 /* SidebarView.swift */; };
+		BA0000000000000000000023 /* AnswerCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0000000000000000000023 /* AnswerCellView.swift */; };
+		BA0000000000000000000024 /* AnswerGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0000000000000000000024 /* AnswerGridView.swift */; };
+		BA0000000000000000000025 /* TopToolbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0000000000000000000025 /* TopToolbarView.swift */; };
+		BA0000000000000000000026 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0000000000000000000026 /* SettingsView.swift */; };
+		BA0000000000000000000027 /* MockTimerMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0000000000000000000027 /* MockTimerMode.swift */; };
+		BA0000000000000000000028 /* KeyCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0000000000000000000028 /* KeyCaptureView.swift */; };
+		BC0000000000000000000001 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC0000000000000000000001 /* Assets.xcassets */; };
+		BC00000000000000000000F0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FC00000000000000000000F0 /* Localizable.strings */; };
+		BT0000000000000000000001 /* AnswerLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FT0000000000000000000001 /* AnswerLogicTests.swift */; };
+		BT0000000000000000000002 /* ModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FT0000000000000000000002 /* ModelTests.swift */; };
+		BT0000000000000000000003 /* ExportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FT0000000000000000000003 /* ExportTests.swift */; };
+		BT0000000000000000000004 /* TimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FT0000000000000000000004 /* TimerTests.swift */; };
+		BT0000000000000000000005 /* StoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FT0000000000000000000005 /* StoreTests.swift */; };
+		BU0000000000000000000001 /* AnswerSheetToolkitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FU0000000000000000000001 /* AnswerSheetToolkitUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		XX0000000000000000000001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = PR0000000000000000000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = TT0000000000000000000001;
+			remoteInfo = AnswerSheetToolkit;
+		};
+		XX0000000000000000000002 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = PR0000000000000000000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = TT0000000000000000000001;
+			remoteInfo = AnswerSheetToolkit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FP0000000000000000000001 /* AnswerSheetToolkit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnswerSheetToolkit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FP0000000000000000000002 /* AnswerSheetToolkitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnswerSheetToolkitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FP0000000000000000000003 /* AnswerSheetToolkitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnswerSheetToolkitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA0000000000000000000001 /* AnswerSheetToolkitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerSheetToolkitApp.swift; sourceTree = "<group>"; };
+		FA0000000000000000000002 /* ThemeMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeMode.swift; sourceTree = "<group>"; };
+		FA0000000000000000000003 /* LanguageMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageMode.swift; sourceTree = "<group>"; };
+		FA0000000000000000000004 /* AnswerEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerEntry.swift; sourceTree = "<group>"; };
+		FA0000000000000000000005 /* AnswerSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerSheet.swift; sourceTree = "<group>"; };
+		FA0000000000000000000006 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		FA0000000000000000000007 /* AnswerValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerValidator.swift; sourceTree = "<group>"; };
+		FA0000000000000000000008 /* GridNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridNavigator.swift; sourceTree = "<group>"; };
+		FA0000000000000000000009 /* ExportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportService.swift; sourceTree = "<group>"; };
+		FA0000000000000000000010 /* ZipArchive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipArchive.swift; sourceTree = "<group>"; };
+		FA0000000000000000000011 /* XLSXWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XLSXWriter.swift; sourceTree = "<group>"; };
+		FA0000000000000000000012 /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
+		FA0000000000000000000013 /* ClipboardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardService.swift; sourceTree = "<group>"; };
+		FA0000000000000000000014 /* LocalizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationService.swift; sourceTree = "<group>"; };
+		FA0000000000000000000015 /* ThemeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeService.swift; sourceTree = "<group>"; };
+		FA0000000000000000000016 /* MockExamTimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockExamTimerViewModel.swift; sourceTree = "<group>"; };
+		FA0000000000000000000017 /* AnswerSheetEditorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerSheetEditorViewModel.swift; sourceTree = "<group>"; };
+		FA0000000000000000000018 /* AppStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStore.swift; sourceTree = "<group>"; };
+		FA0000000000000000000019 /* ExportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportViewModel.swift; sourceTree = "<group>"; };
+		FA0000000000000000000020 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		FA0000000000000000000021 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		FA0000000000000000000022 /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
+		FA0000000000000000000023 /* AnswerCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerCellView.swift; sourceTree = "<group>"; };
+		FA0000000000000000000024 /* AnswerGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerGridView.swift; sourceTree = "<group>"; };
+		FA0000000000000000000025 /* TopToolbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopToolbarView.swift; sourceTree = "<group>"; };
+		FA0000000000000000000026 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		FA0000000000000000000027 /* MockTimerMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTimerMode.swift; sourceTree = "<group>"; };
+		FA0000000000000000000028 /* KeyCaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyCaptureView.swift; sourceTree = "<group>"; };
+		FC0000000000000000000001 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FC0000000000000000000020 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC00000000000000000000E1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FC00000000000000000000E2 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		FT0000000000000000000001 /* AnswerLogicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerLogicTests.swift; sourceTree = "<group>"; };
+		FT0000000000000000000002 /* ModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTests.swift; sourceTree = "<group>"; };
+		FT0000000000000000000003 /* ExportTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportTests.swift; sourceTree = "<group>"; };
+		FT0000000000000000000004 /* TimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerTests.swift; sourceTree = "<group>"; };
+		FT0000000000000000000005 /* StoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTests.swift; sourceTree = "<group>"; };
+		FU0000000000000000000001 /* AnswerSheetToolkitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerSheetToolkitUITests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		PP0000000000000000000002 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		PP0000000000000000000012 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		PP0000000000000000000022 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		GG0000000000000000000001 = {
+			isa = PBXGroup;
+			children = (
+				GG0000000000000000000002 /* AnswerSheetToolkit */,
+				GG0000000000000000000010 /* AnswerSheetToolkitTests */,
+				GG0000000000000000000011 /* AnswerSheetToolkitUITests */,
+				GG0000000000000000000012 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		GG0000000000000000000002 /* AnswerSheetToolkit */ = {
+			isa = PBXGroup;
+			children = (
+				GG0000000000000000000003 /* App */,
+				GG0000000000000000000004 /* Models */,
+				GG0000000000000000000005 /* Logic */,
+				GG0000000000000000000006 /* Services */,
+				GG0000000000000000000007 /* ViewModels */,
+				GG0000000000000000000008 /* Views */,
+				GG0000000000000000000009 /* Resources */,
+				FC0000000000000000000020 /* Info.plist */,
+			);
+			path = AnswerSheetToolkit;
+			sourceTree = "<group>";
+		};
+		GG0000000000000000000003 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				FA0000000000000000000001 /* AnswerSheetToolkitApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		GG0000000000000000000004 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FA0000000000000000000002 /* ThemeMode.swift */,
+				FA0000000000000000000027 /* MockTimerMode.swift */,
+				FA0000000000000000000003 /* LanguageMode.swift */,
+				FA0000000000000000000004 /* AnswerEntry.swift */,
+				FA0000000000000000000005 /* AnswerSheet.swift */,
+				FA0000000000000000000006 /* AppSettings.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		GG0000000000000000000005 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				FA0000000000000000000007 /* AnswerValidator.swift */,
+				FA0000000000000000000008 /* GridNavigator.swift */,
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
+		GG0000000000000000000006 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FA0000000000000000000009 /* ExportService.swift */,
+				FA0000000000000000000010 /* ZipArchive.swift */,
+				FA0000000000000000000011 /* XLSXWriter.swift */,
+				FA0000000000000000000012 /* PersistenceService.swift */,
+				FA0000000000000000000013 /* ClipboardService.swift */,
+				FA0000000000000000000014 /* LocalizationService.swift */,
+				FA0000000000000000000015 /* ThemeService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		GG0000000000000000000007 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				FA0000000000000000000016 /* MockExamTimerViewModel.swift */,
+				FA0000000000000000000017 /* AnswerSheetEditorViewModel.swift */,
+				FA0000000000000000000018 /* AppStore.swift */,
+				FA0000000000000000000019 /* ExportViewModel.swift */,
+				FA0000000000000000000020 /* SettingsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		GG0000000000000000000008 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FA0000000000000000000021 /* MainView.swift */,
+				FA0000000000000000000022 /* SidebarView.swift */,
+				FA0000000000000000000023 /* AnswerCellView.swift */,
+				FA0000000000000000000024 /* AnswerGridView.swift */,
+				FA0000000000000000000025 /* TopToolbarView.swift */,
+				FA0000000000000000000026 /* SettingsView.swift */,
+				FA0000000000000000000028 /* KeyCaptureView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		GG0000000000000000000009 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FC0000000000000000000001 /* Assets.xcassets */,
+				FC00000000000000000000F0 /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		GG0000000000000000000010 /* AnswerSheetToolkitTests */ = {
+			isa = PBXGroup;
+			children = (
+				FT0000000000000000000001 /* AnswerLogicTests.swift */,
+				FT0000000000000000000002 /* ModelTests.swift */,
+				FT0000000000000000000003 /* ExportTests.swift */,
+				FT0000000000000000000004 /* TimerTests.swift */,
+				FT0000000000000000000005 /* StoreTests.swift */,
+			);
+			path = AnswerSheetToolkitTests;
+			sourceTree = "<group>";
+		};
+		GG0000000000000000000011 /* AnswerSheetToolkitUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FU0000000000000000000001 /* AnswerSheetToolkitUITests.swift */,
+			);
+			path = AnswerSheetToolkitUITests;
+			sourceTree = "<group>";
+		};
+		GG0000000000000000000012 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FP0000000000000000000001 /* AnswerSheetToolkit.app */,
+				FP0000000000000000000002 /* AnswerSheetToolkitTests.xctest */,
+				FP0000000000000000000003 /* AnswerSheetToolkitUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		TT0000000000000000000001 /* AnswerSheetToolkit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = LL0000000000000000000002 /* Build configuration list for PBXNativeTarget "AnswerSheetToolkit" */;
+			buildPhases = (
+				PP0000000000000000000001 /* Sources */,
+				PP0000000000000000000002 /* Frameworks */,
+				PP0000000000000000000003 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AnswerSheetToolkit;
+			productName = AnswerSheetToolkit;
+			productReference = FP0000000000000000000001 /* AnswerSheetToolkit.app */;
+			productType = "com.apple.product-type.application";
+		};
+		TT0000000000000000000002 /* AnswerSheetToolkitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = LL0000000000000000000003 /* Build configuration list for PBXNativeTarget "AnswerSheetToolkitTests" */;
+			buildPhases = (
+				PP0000000000000000000011 /* Sources */,
+				PP0000000000000000000012 /* Frameworks */,
+				PP0000000000000000000013 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DD0000000000000000000001 /* PBXTargetDependency */,
+			);
+			name = AnswerSheetToolkitTests;
+			productName = AnswerSheetToolkitTests;
+			productReference = FP0000000000000000000002 /* AnswerSheetToolkitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		TT0000000000000000000003 /* AnswerSheetToolkitUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = LL0000000000000000000004 /* Build configuration list for PBXNativeTarget "AnswerSheetToolkitUITests" */;
+			buildPhases = (
+				PP0000000000000000000021 /* Sources */,
+				PP0000000000000000000022 /* Frameworks */,
+				PP0000000000000000000023 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DD0000000000000000000002 /* PBXTargetDependency */,
+			);
+			name = AnswerSheetToolkitUITests;
+			productName = AnswerSheetToolkitUITests;
+			productReference = FP0000000000000000000003 /* AnswerSheetToolkitUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		PR0000000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					TT0000000000000000000001 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					TT0000000000000000000002 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = TT0000000000000000000001;
+					};
+					TT0000000000000000000003 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = TT0000000000000000000001;
+					};
+				};
+			};
+			buildConfigurationList = LL0000000000000000000001 /* Build configuration list for PBXProject "AnswerSheetToolkit" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				"zh-Hans",
+			);
+			mainGroup = GG0000000000000000000001;
+			productRefGroup = GG0000000000000000000012 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				TT0000000000000000000001 /* AnswerSheetToolkit */,
+				TT0000000000000000000002 /* AnswerSheetToolkitTests */,
+				TT0000000000000000000003 /* AnswerSheetToolkitUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		PP0000000000000000000003 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC0000000000000000000001 /* Assets.xcassets in Resources */,
+				BC00000000000000000000F0 /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		PP0000000000000000000013 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		PP0000000000000000000023 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		PP0000000000000000000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA0000000000000000000001 /* AnswerSheetToolkitApp.swift in Sources */,
+				BA0000000000000000000002 /* ThemeMode.swift in Sources */,
+				BA0000000000000000000027 /* MockTimerMode.swift in Sources */,
+				BA0000000000000000000003 /* LanguageMode.swift in Sources */,
+				BA0000000000000000000004 /* AnswerEntry.swift in Sources */,
+				BA0000000000000000000005 /* AnswerSheet.swift in Sources */,
+				BA0000000000000000000006 /* AppSettings.swift in Sources */,
+				BA0000000000000000000007 /* AnswerValidator.swift in Sources */,
+				BA0000000000000000000008 /* GridNavigator.swift in Sources */,
+				BA0000000000000000000009 /* ExportService.swift in Sources */,
+				BA0000000000000000000010 /* ZipArchive.swift in Sources */,
+				BA0000000000000000000011 /* XLSXWriter.swift in Sources */,
+				BA0000000000000000000012 /* PersistenceService.swift in Sources */,
+				BA0000000000000000000013 /* ClipboardService.swift in Sources */,
+				BA0000000000000000000014 /* LocalizationService.swift in Sources */,
+				BA0000000000000000000015 /* ThemeService.swift in Sources */,
+				BA0000000000000000000016 /* MockExamTimerViewModel.swift in Sources */,
+				BA0000000000000000000017 /* AnswerSheetEditorViewModel.swift in Sources */,
+				BA0000000000000000000018 /* AppStore.swift in Sources */,
+				BA0000000000000000000019 /* ExportViewModel.swift in Sources */,
+				BA0000000000000000000020 /* SettingsViewModel.swift in Sources */,
+				BA0000000000000000000021 /* MainView.swift in Sources */,
+				BA0000000000000000000022 /* SidebarView.swift in Sources */,
+				BA0000000000000000000023 /* AnswerCellView.swift in Sources */,
+				BA0000000000000000000024 /* AnswerGridView.swift in Sources */,
+				BA0000000000000000000025 /* TopToolbarView.swift in Sources */,
+				BA0000000000000000000026 /* SettingsView.swift in Sources */,
+				BA0000000000000000000028 /* KeyCaptureView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		PP0000000000000000000011 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BT0000000000000000000001 /* AnswerLogicTests.swift in Sources */,
+				BT0000000000000000000002 /* ModelTests.swift in Sources */,
+				BT0000000000000000000003 /* ExportTests.swift in Sources */,
+				BT0000000000000000000004 /* TimerTests.swift in Sources */,
+				BT0000000000000000000005 /* StoreTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		PP0000000000000000000021 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BU0000000000000000000001 /* AnswerSheetToolkitUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DD0000000000000000000001 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = TT0000000000000000000001 /* AnswerSheetToolkit */;
+			targetProxy = XX0000000000000000000001 /* PBXContainerItemProxy */;
+		};
+		DD0000000000000000000002 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = TT0000000000000000000001 /* AnswerSheetToolkit */;
+			targetProxy = XX0000000000000000000002 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FC00000000000000000000F0 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC00000000000000000000E1 /* en */,
+				FC00000000000000000000E2 /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CC0000000000000000000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		CC0000000000000000000002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_OPTIMIZATION_LEVEL = s;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		CC0000000000000000000011 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = AnswerSheetToolkit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.answersheet.toolkit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Debug;
+		};
+		CC0000000000000000000012 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = AnswerSheetToolkit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.answersheet.toolkit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Release;
+		};
+		CC0000000000000000000021 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.answersheet.toolkit.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AnswerSheetToolkit.app/Contents/MacOS/AnswerSheetToolkit";
+			};
+			name = Debug;
+		};
+		CC0000000000000000000022 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.answersheet.toolkit.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AnswerSheetToolkit.app/Contents/MacOS/AnswerSheetToolkit";
+			};
+			name = Release;
+		};
+		CC0000000000000000000031 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.answersheet.toolkit.uitests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = AnswerSheetToolkit;
+			};
+			name = Debug;
+		};
+		CC0000000000000000000032 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.answersheet.toolkit.uitests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = AnswerSheetToolkit;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		LL0000000000000000000001 /* Build configuration list for PBXProject "AnswerSheetToolkit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC0000000000000000000001 /* Debug */,
+				CC0000000000000000000002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		LL0000000000000000000002 /* Build configuration list for PBXNativeTarget "AnswerSheetToolkit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC0000000000000000000011 /* Debug */,
+				CC0000000000000000000012 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		LL0000000000000000000003 /* Build configuration list for PBXNativeTarget "AnswerSheetToolkitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC0000000000000000000021 /* Debug */,
+				CC0000000000000000000022 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		LL0000000000000000000004 /* Build configuration list for PBXNativeTarget "AnswerSheetToolkitUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC0000000000000000000031 /* Debug */,
+				CC0000000000000000000032 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = PR0000000000000000000001 /* Project object */;
+}

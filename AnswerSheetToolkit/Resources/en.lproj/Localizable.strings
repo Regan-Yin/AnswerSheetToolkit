@@ -1,0 +1,83 @@
+/* Toolbar */
+"toolbar.newSheet" = "New Answer Sheet";
+"toolbar.toggleSidebar" = "Toggle Sidebar";
+"toolbar.settings" = "Settings";
+"toolbar.export" = "Export";
+
+/* Empty state */
+"empty.title" = "No Answer Sheet Selected";
+"empty.subtitle" = "Create a new answer sheet to start recording answers.";
+
+/* Sidebar */
+"sidebar.rename" = "Rename";
+"sidebar.renamePlaceholder" = "Sheet name";
+"sidebar.delete" = "Delete";
+"sidebar.questionCount" = "%d questions";
+
+/* Common */
+"common.cancel" = "Cancel";
+"common.save" = "Save";
+"common.ok" = "OK";
+"common.done" = "Done";
+
+/* Export */
+"export.toExcel" = "Export to Excel…";
+"export.copyClipboard" = "Copy Table to Clipboard";
+"export.resultTitle" = "Export";
+"export.savedTo" = "Saved to %@";
+"export.copied" = "Copied to clipboard.";
+"export.replace" = "Replace";
+"export.successExcel" = "Exported: %@";
+"export.successClipboard" = "Copied to clipboard";
+"export.failed" = "Export failed: %@";
+
+/* Mock exam */
+"mock.mode" = "Mock Exam";
+"mock.timer" = "Timer";
+"mock.start" = "Start";
+"mock.startingIn" = "Starting in";
+"mock.startingInShort" = "Starting in %d…";
+"mock.mode.countUp" = "Count Up";
+"mock.mode.countDown" = "Count Down";
+
+/* Accessibility */
+"a11y.answerGrid" = "Answer grid";
+"a11y.questionAnswered" = "Question %d, answer %@";
+"a11y.questionUnanswered" = "Question %d, unanswered";
+
+/* Settings */
+"settings.layout" = "Question Layout";
+"settings.totalQuestions" = "Total Questions";
+"settings.questionsPerRow" = "Questions Per Row";
+"settings.rows" = "Rows";
+"settings.answerChoices" = "Answer Choices";
+"settings.gridPreview" = "Grid";
+"settings.gridPreviewValue" = "%d × %d (%d questions)";
+"settings.layoutHelp" = "Edit total questions to auto-fit the most square grid (the last row may be partly empty), or set rows and questions-per-row directly. Layout changes only apply to new answer sheets.";
+"settings.export" = "Export";
+"settings.exportFolder" = "Export Folder";
+"settings.exportFolderNone" = "Ask each time";
+"settings.chooseFolder" = "Choose Folder…";
+"settings.clearFolder" = "Clear";
+"settings.language" = "Language";
+"settings.theme" = "Theme";
+"settings.mockExam" = "Mock Exam";
+"settings.timingMode" = "Timing Mode";
+"settings.durationHours" = "Hours";
+"settings.durationMinutes" = "Minutes";
+"settings.durationTotal" = "Total Duration";
+"settings.countdown" = "Start Delay";
+"settings.countdownSeconds" = "%d seconds";
+
+/* Language names */
+"language.english" = "English";
+"language.simplifiedChinese" = "简体中文";
+
+/* Theme names */
+"theme.system" = "Follow System";
+"theme.light" = "Light";
+"theme.dark" = "Dark";
+"theme.lightAmber" = "Light Amber";
+
+/* Sheet */
+"sheet.untitled" = "Answer Sheet %d";

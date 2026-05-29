@@ -1,0 +1,83 @@
+/* Toolbar */
+"toolbar.newSheet" = "新建答题卡";
+"toolbar.toggleSidebar" = "显示/隐藏边栏";
+"toolbar.settings" = "设置";
+"toolbar.export" = "导出";
+
+/* Empty state */
+"empty.title" = "未选择答题卡";
+"empty.subtitle" = "创建一张新的答题卡开始记录答案。";
+
+/* Sidebar */
+"sidebar.rename" = "重命名";
+"sidebar.renamePlaceholder" = "答题卡名称";
+"sidebar.delete" = "删除";
+"sidebar.questionCount" = "%d 道题";
+
+/* Common */
+"common.cancel" = "取消";
+"common.save" = "保存";
+"common.ok" = "好";
+"common.done" = "完成";
+
+/* Export */
+"export.toExcel" = "导出为 Excel…";
+"export.copyClipboard" = "复制表格到剪贴板";
+"export.resultTitle" = "导出";
+"export.savedTo" = "已保存到 %@";
+"export.copied" = "已复制到剪贴板。";
+"export.replace" = "替换";
+"export.successExcel" = "已导出：%@";
+"export.successClipboard" = "已复制到剪贴板";
+"export.failed" = "导出失败：%@";
+
+/* Mock exam */
+"mock.mode" = "模拟考试";
+"mock.timer" = "计时";
+"mock.start" = "开始";
+"mock.startingIn" = "倒计时";
+"mock.startingInShort" = "倒计时 %d…";
+"mock.mode.countUp" = "正计时";
+"mock.mode.countDown" = "倒计时";
+
+/* Accessibility */
+"a11y.answerGrid" = "答题区";
+"a11y.questionAnswered" = "第 %d 题，答案 %@";
+"a11y.questionUnanswered" = "第 %d 题，未作答";
+
+/* Settings */
+"settings.layout" = "题目布局";
+"settings.totalQuestions" = "题目总数";
+"settings.questionsPerRow" = "每行题数";
+"settings.rows" = "行数";
+"settings.answerChoices" = "答案选项";
+"settings.gridPreview" = "网格";
+"settings.gridPreviewValue" = "%d × %d（%d 题）";
+"settings.layoutHelp" = "编辑题目总数会自动排布为最接近正方形的网格（最后一行可能未填满），也可直接设置行数与每行题数。布局更改仅对新建答题卡生效。";
+"settings.export" = "导出";
+"settings.exportFolder" = "导出文件夹";
+"settings.exportFolderNone" = "每次询问";
+"settings.chooseFolder" = "选择文件夹…";
+"settings.clearFolder" = "清除";
+"settings.language" = "语言";
+"settings.theme" = "主题";
+"settings.mockExam" = "模拟考试";
+"settings.timingMode" = "计时模式";
+"settings.durationHours" = "小时";
+"settings.durationMinutes" = "分钟";
+"settings.durationTotal" = "总时长";
+"settings.countdown" = "开始延迟";
+"settings.countdownSeconds" = "%d 秒";
+
+/* Language names */
+"language.english" = "English";
+"language.simplifiedChinese" = "简体中文";
+
+/* Theme names */
+"theme.system" = "跟随系统";
+"theme.light" = "浅色";
+"theme.dark" = "深色";
+"theme.lightAmber" = "暖琥珀";
+
+/* Sheet */
+"sheet.untitled" = "答题卡 %d";
