@@ -8,7 +8,7 @@ struct AnswerSheetToolkitApp: App {
         WindowGroup {
             MainView()
                 .environmentObject(store)
-                .frame(minWidth: 820, minHeight: 560)
+                .frame(minWidth: 320, minHeight: 280)
         }
         .windowToolbarStyle(.unified)
         .commands {
