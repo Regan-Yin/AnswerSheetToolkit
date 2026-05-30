@@ -17,35 +17,53 @@ struct AnswerGridView: View {
         }
     }
 
+    /// Approximate rendered width of a single cell (number + box + spacing), used
+    /// to decide how many columns fit the current window width.
+    private let approxCellWidth: CGFloat = 76
+    private let gridPadding: CGFloat = 20
+
+    /// Visual columns for the current width, never more than the configured
+    /// questions-per-row. Exports always use the configured value, not this.
+    private func visualColumns(width: CGFloat, perRow: Int) -> Int {
+        let usable = max(0, width - gridPadding * 2)
+        let fit = Int((usable / approxCellWidth).rounded(.down))
+        return max(1, min(perRow, fit))
+    }
+
     private func gridBody(sheet: AnswerSheet) -> some View {
         let perRow = max(1, sheet.questionsPerRow)
-        let rows = stride(from: 0, to: sheet.answers.count, by: perRow).map { start in
-            Array(sheet.answers[start..<min(start + perRow, sheet.answers.count)])
-        }
 
-        return ScrollViewReader { proxy in
-            ScrollView {
-                LazyVStack(alignment: .leading, spacing: 6) {
-                    ForEach(Array(rows.enumerated()), id: \.offset) { _, rowEntries in
-                        HStack(spacing: 8) {
-                            ForEach(rowEntries) { entry in
-                                AnswerCellView(
-                                    entry: entry,
-                                    isFocused: store.editor.isAnswering
-                                        && (entry.questionNumber - 1) == store.editor.focusedIndex,
-                                    onTap: { focusCell(entry.questionNumber - 1) }
-                                )
-                                .id(entry.questionNumber - 1)
+        return GeometryReader { geo in
+            let columns = visualColumns(width: geo.size.width, perRow: perRow)
+            let rows = stride(from: 0, to: sheet.answers.count, by: columns).map { start in
+                Array(sheet.answers[start..<min(start + columns, sheet.answers.count)])
+            }
+
+            ScrollViewReader { proxy in
+                ScrollView {
+                    LazyVStack(alignment: .leading, spacing: 6) {
+                        ForEach(Array(rows.enumerated()), id: \.offset) { _, rowEntries in
+                            HStack(spacing: 8) {
+                                ForEach(rowEntries) { entry in
+                                    AnswerCellView(
+                                        entry: entry,
+                                        isFocused: store.editor.isAnswering
+                                            && (entry.questionNumber - 1) == store.editor.focusedIndex,
+                                        onTap: { focusCell(entry.questionNumber - 1) }
+                                    )
+                                    .id(entry.questionNumber - 1)
+                                }
+                                Spacer(minLength: 0)
                             }
-                            Spacer(minLength: 0)
                         }
                     }
+                    .padding(gridPadding)
+                    .frame(maxWidth: .infinity, alignment: .leading)
                 }
-                .padding(20)
-            }
-            .onChange(of: store.editor.focusedIndex) { _, index in
-                withAnimation(.easeInOut(duration: 0.12)) {
-                    proxy.scrollTo(index, anchor: .center)
+                .onChange(of: store.editor.focusedIndex) { _, index in
+                    withAnimation(.easeInOut(duration: 0.12)) {
+                        proxy.scrollTo(index, anchor: .center)
+                    }
                 }
             }
         }

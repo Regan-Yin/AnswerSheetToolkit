@@ -6,8 +6,10 @@ import Foundation
 /// (number, answer). With `questionsPerRow == 10`, each row has 20 columns.
 /// Unanswered questions export as `N/A`. Uses each sheet's own snapshot layout.
 enum ExportService {
-    /// Produces the 2D table for a sheet, matching the on-screen grid.
+    /// Produces the 2D table for a sheet using its snapshot `questionsPerRow`.
     ///
+    /// This always honors the configured questions-per-row, independent of how many
+    /// columns the on-screen grid happens to show for the current window size.
     /// Each output row contains `questionsPerRow * 2` cells: `[num, ans, num, ans, ...]`.
     /// The final row may contain fewer questions if `totalQuestions` is not divisible
     /// by `questionsPerRow`.

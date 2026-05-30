@@ -26,7 +26,7 @@ struct SettingsView: View {
                 )
                 NumericField(
                     title: store.t("settings.rows"),
-                    value: vm.computedRows,
+                    value: vm.draft.defaultRows,
                     range: AppSettings.rowsRange,
                     onChange: { vm.setRows($0) }
                 )
@@ -37,11 +37,6 @@ struct SettingsView: View {
                     LabeledContent(store.t("settings.answerChoices"),
                                    value: vm.draft.answerChoicesPreview)
                 }
-                LabeledContent(store.t("settings.gridPreview"),
-                               value: store.t("settings.gridPreviewValue",
-                                              vm.computedRows,
-                                              vm.draft.defaultQuestionsPerRow,
-                                              vm.draft.defaultTotalQuestions))
                 Text(store.t("settings.layoutHelp"))
                     .font(.caption)
                     .foregroundStyle(.secondary)

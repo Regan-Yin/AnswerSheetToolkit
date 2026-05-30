@@ -21,6 +21,40 @@ final class StoreTests: XCTestCase {
         AppStore(persistence: PersistenceService(directory: tempDir))
     }
 
+    // MARK: Layout settings (total = rows × per-row)
+
+    func testEditingRowsRecomputesTotal() {
+        let store = makeStore()
+        let vm = SettingsViewModel(store: store)
+        vm.setQuestionsPerRow(10)
+        vm.setRows(8)
+        XCTAssertEqual(vm.draft.defaultRows, 8)
+        XCTAssertEqual(vm.draft.defaultQuestionsPerRow, 10)
+        XCTAssertEqual(vm.draft.defaultTotalQuestions, 80)
+    }
+
+    func testEditingPerRowRecomputesTotal() {
+        let store = makeStore()
+        let vm = SettingsViewModel(store: store)
+        vm.setRows(10)
+        vm.setQuestionsPerRow(5)
+        XCTAssertEqual(vm.draft.defaultRows, 10)
+        XCTAssertEqual(vm.draft.defaultQuestionsPerRow, 5)
+        XCTAssertEqual(vm.draft.defaultTotalQuestions, 50)
+    }
+
+    func testEditingTotalDoesNotChangeRowsOrPerRow() {
+        let store = makeStore()
+        let vm = SettingsViewModel(store: store)
+        vm.setRows(10)
+        vm.setQuestionsPerRow(10) // total -> 100
+        vm.setTotalQuestions(85)
+        XCTAssertEqual(vm.draft.defaultTotalQuestions, 85)
+        // Rows and per-row are untouched by editing total.
+        XCTAssertEqual(vm.draft.defaultRows, 10)
+        XCTAssertEqual(vm.draft.defaultQuestionsPerRow, 10)
+    }
+
     // MARK: Create / answer entry
 
     func testCreateSheetEntersAnsweringAndFocusesQ1() {

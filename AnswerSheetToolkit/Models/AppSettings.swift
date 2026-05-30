@@ -8,6 +8,9 @@ import Foundation
 struct AppSettings: Codable, Equatable, Sendable {
     var defaultTotalQuestions: Int
     var defaultQuestionsPerRow: Int
+    /// Default number of rows. Editing rows or per-row recomputes total
+    /// (`rows * perRow`); editing total leaves rows and per-row untouched.
+    var defaultRows: Int
     /// Number of allowed answer choices, counted from `A`. 4 means A–D.
     var defaultAnswerOptionCount: Int
     /// Stored as a security-scoped bookmark-friendly path string when available.
@@ -35,6 +38,7 @@ struct AppSettings: Codable, Equatable, Sendable {
     static let `default` = AppSettings(
         defaultTotalQuestions: 100,
         defaultQuestionsPerRow: 10,
+        defaultRows: 10,
         defaultAnswerOptionCount: 4,
         exportFolderURL: nil,
         language: .english,
@@ -47,6 +51,7 @@ struct AppSettings: Codable, Equatable, Sendable {
     init(
         defaultTotalQuestions: Int,
         defaultQuestionsPerRow: Int,
+        defaultRows: Int,
         defaultAnswerOptionCount: Int,
         exportFolderURL: URL?,
         language: LanguageMode,
@@ -57,6 +62,7 @@ struct AppSettings: Codable, Equatable, Sendable {
     ) {
         self.defaultTotalQuestions = defaultTotalQuestions
         self.defaultQuestionsPerRow = defaultQuestionsPerRow
+        self.defaultRows = defaultRows
         self.defaultAnswerOptionCount = defaultAnswerOptionCount
         self.exportFolderURL = exportFolderURL
         self.language = language
@@ -73,6 +79,7 @@ struct AppSettings: Codable, Equatable, Sendable {
         let def = AppSettings.default
         defaultTotalQuestions = try c.decodeIfPresent(Int.self, forKey: .defaultTotalQuestions) ?? def.defaultTotalQuestions
         defaultQuestionsPerRow = try c.decodeIfPresent(Int.self, forKey: .defaultQuestionsPerRow) ?? def.defaultQuestionsPerRow
+        defaultRows = try c.decodeIfPresent(Int.self, forKey: .defaultRows) ?? def.defaultRows
         defaultAnswerOptionCount = try c.decodeIfPresent(Int.self, forKey: .defaultAnswerOptionCount) ?? def.defaultAnswerOptionCount
         exportFolderURL = try c.decodeIfPresent(URL.self, forKey: .exportFolderURL)
         language = try c.decodeIfPresent(LanguageMode.self, forKey: .language) ?? def.language
@@ -87,30 +94,13 @@ struct AppSettings: Codable, Equatable, Sendable {
         var copy = self
         copy.defaultTotalQuestions = Self.clamp(defaultTotalQuestions, to: Self.totalQuestionsRange)
         copy.defaultQuestionsPerRow = Self.clamp(defaultQuestionsPerRow, to: Self.questionsPerRowRange)
+        copy.defaultRows = Self.clamp(defaultRows, to: Self.rowsRange)
         copy.defaultAnswerOptionCount = Self.clamp(defaultAnswerOptionCount, to: Self.answerOptionRange)
         if !Self.countdownOptions.contains(copy.mockExamCountdownSeconds) {
             copy.mockExamCountdownSeconds = 0
         }
         copy.mockExamDurationSeconds = max(60, min(mockExamDurationSeconds, 23 * 3600 + 59 * 60))
         return copy
-    }
-
-    /// Computed number of rows for the default layout preview.
-    var computedRows: Int {
-        let total = Self.clamp(defaultTotalQuestions, to: Self.totalQuestionsRange)
-        let perRow = Self.clamp(defaultQuestionsPerRow, to: Self.questionsPerRowRange)
-        return Int((Double(total) / Double(perRow)).rounded(.up))
-    }
-
-    /// The number of questions per row that produces the most "square" grid for a
-    /// given total. Uses `ceil(sqrt(total))` columns so the grid is as square as
-    /// possible while allowing the final row to be partially filled.
-    ///
-    /// Example: 85 → 10 columns × 9 rows (last row holds 5).
-    static func suggestedColumns(forTotal total: Int) -> Int {
-        let clampedTotal = clamp(total, to: totalQuestionsRange)
-        let columns = Int(Double(clampedTotal).squareRoot().rounded(.up))
-        return clamp(columns, to: questionsPerRowRange)
     }
 
     /// The last allowed answer letter for the default option count, e.g. "D".

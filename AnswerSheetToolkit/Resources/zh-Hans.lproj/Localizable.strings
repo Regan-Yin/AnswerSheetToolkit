@@ -51,9 +51,7 @@
 "settings.questionsPerRow" = "每行题数";
 "settings.rows" = "行数";
 "settings.answerChoices" = "答案选项";
-"settings.gridPreview" = "网格";
-"settings.gridPreviewValue" = "%d × %d（%d 题）";
-"settings.layoutHelp" = "编辑题目总数会自动排布为最接近正方形的网格（最后一行可能未填满），也可直接设置行数与每行题数。布局更改仅对新建答题卡生效。";
+"settings.layoutHelp" = "题目总数 = 行数 × 每行题数。修改行数或每行题数会更新总数；单独修改总数则不会改变行数与每行题数。窗口较窄时屏幕上每行可能显示更少题目，但导出始终采用所设置的每行题数。布局更改仅对新建答题卡生效。";
 "settings.export" = "导出";
 "settings.exportFolder" = "导出文件夹";
 "settings.exportFolderNone" = "每次询问";

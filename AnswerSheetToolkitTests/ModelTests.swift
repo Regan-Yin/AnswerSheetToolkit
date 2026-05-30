@@ -52,33 +52,10 @@ final class ModelTests: XCTestCase {
         XCTAssertEqual(v.mockExamCountdownSeconds, 0)
     }
 
-    func testComputedRows() {
+    func testDefaultRowsValidationClamps() {
         var s = AppSettings.default
-        s.defaultTotalQuestions = 120
-        s.defaultQuestionsPerRow = 12
-        XCTAssertEqual(s.computedRows, 10)
-    }
-
-    func testSuggestedColumnsIsAsSquareAsPossible() {
-        // 100 -> 10x10 perfect square.
-        XCTAssertEqual(AppSettings.suggestedColumns(forTotal: 100), 10)
-        // 85 -> 10 columns, 9 rows (last row holds 5).
-        XCTAssertEqual(AppSettings.suggestedColumns(forTotal: 85), 10)
-        // 81 -> 9 columns, 9 rows (perfect square).
-        XCTAssertEqual(AppSettings.suggestedColumns(forTotal: 81), 9)
-        // 50 -> ceil(sqrt(50)) = 8 columns, 7 rows.
-        XCTAssertEqual(AppSettings.suggestedColumns(forTotal: 50), 8)
-        // 1 -> 1 column.
-        XCTAssertEqual(AppSettings.suggestedColumns(forTotal: 1), 1)
-    }
-
-    func testEightyFiveQuestionsLayout() {
-        var s = AppSettings.default
-        s.defaultTotalQuestions = 85
-        s.defaultQuestionsPerRow = AppSettings.suggestedColumns(forTotal: 85)
-        XCTAssertEqual(s.defaultQuestionsPerRow, 10)
-        XCTAssertEqual(s.computedRows, 9)
-        // Total stays 85 (open edit) — last row is partially filled.
-        XCTAssertEqual(s.defaultTotalQuestions, 85)
+        s.defaultRows = 9999
+        let v = s.validated()
+        XCTAssertEqual(v.defaultRows, AppSettings.rowsRange.upperBound)
     }
 }

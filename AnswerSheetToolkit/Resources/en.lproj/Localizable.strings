@@ -51,9 +51,7 @@
 "settings.questionsPerRow" = "Questions Per Row";
 "settings.rows" = "Rows";
 "settings.answerChoices" = "Answer Choices";
-"settings.gridPreview" = "Grid";
-"settings.gridPreviewValue" = "%d × %d (%d questions)";
-"settings.layoutHelp" = "Edit total questions to auto-fit the most square grid (the last row may be partly empty), or set rows and questions-per-row directly. Layout changes only apply to new answer sheets.";
+"settings.layoutHelp" = "Total questions = rows × questions per row. Editing rows or questions-per-row updates the total; editing the total on its own leaves rows and questions-per-row unchanged. A narrow window may show fewer per row on screen, but exports always use your questions-per-row setting. Layout changes only apply to new answer sheets.";
 "settings.export" = "Export";
 "settings.exportFolder" = "Export Folder";
 "settings.exportFolderNone" = "Ask each time";

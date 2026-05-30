@@ -26,35 +26,28 @@ final class SettingsViewModel: ObservableObject {
         draft = store.settings
     }
 
-    var computedRows: Int { draft.computedRows }
+    // MARK: - Layout (total = rows × per-row)
 
-    // MARK: - Layout (interrelated total / per-row / rows)
-
-    /// Sets the total question count (open edit — may be indivisible) and
-    /// re-suggests a near-square columns-per-row to fit it.
+    /// Sets the total question count directly. Open edit — leaves rows and
+    /// questions-per-row untouched.
     func setTotalQuestions(_ total: Int) {
-        let clamped = Self.clamp(total, to: AppSettings.totalQuestionsRange)
-        draft.defaultTotalQuestions = clamped
-        draft.defaultQuestionsPerRow = AppSettings.suggestedColumns(forTotal: clamped)
+        draft.defaultTotalQuestions = Self.clamp(total, to: AppSettings.totalQuestionsRange)
         commit()
     }
 
-    /// Sets questions per row, keeping the current row count and recomputing the
-    /// total (rows × per-row).
+    /// Sets questions per row and recomputes the total (rows × per-row).
     func setQuestionsPerRow(_ perRow: Int) {
         let clamped = Self.clamp(perRow, to: AppSettings.questionsPerRowRange)
-        let rows = draft.computedRows
         draft.defaultQuestionsPerRow = clamped
-        draft.defaultTotalQuestions = Self.clamp(rows * clamped, to: AppSettings.totalQuestionsRange)
+        draft.defaultTotalQuestions = Self.clamp(draft.defaultRows * clamped, to: AppSettings.totalQuestionsRange)
         commit()
     }
 
-    /// Sets the row count, keeping per-row constant and recomputing the total
-    /// (rows × per-row).
+    /// Sets the row count and recomputes the total (rows × per-row).
     func setRows(_ rows: Int) {
-        let clampedRows = Self.clamp(rows, to: AppSettings.rowsRange)
-        let perRow = draft.defaultQuestionsPerRow
-        draft.defaultTotalQuestions = Self.clamp(clampedRows * perRow, to: AppSettings.totalQuestionsRange)
+        let clamped = Self.clamp(rows, to: AppSettings.rowsRange)
+        draft.defaultRows = clamped
+        draft.defaultTotalQuestions = Self.clamp(clamped * draft.defaultQuestionsPerRow, to: AppSettings.totalQuestionsRange)
         commit()
     }
 
