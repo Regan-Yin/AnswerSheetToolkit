@@ -8,9 +8,12 @@ struct AnswerSheetToolkitApp: App {
         WindowGroup {
             MainView()
                 .environmentObject(store)
-                .frame(minWidth: 320, minHeight: 280)
+                .frame(minWidth: 320, idealWidth: 900, maxWidth: .infinity,
+                       minHeight: 280, idealHeight: 640, maxHeight: .infinity)
         }
         .windowToolbarStyle(.unified)
+        .windowResizability(.contentMinSize)
+        .defaultSize(width: 900, height: 640)
         .commands {
             CommandGroup(replacing: .newItem) {
                 Button(store.t("toolbar.newSheet")) {
